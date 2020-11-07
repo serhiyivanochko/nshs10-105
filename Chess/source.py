@@ -24,9 +24,15 @@ def create_board():
             start_color = "white"
 
 
+def l_mouse_button_click(event):
+    print("Clicked")
+
+
 canvas = Canvas(window, width=600, height=600)
 canvas.pack()
 
 create_board()
+
+window.bind("<Button-1>", l_mouse_button_click)
 
 window.mainloop()
