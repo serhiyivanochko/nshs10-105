@@ -24,8 +24,19 @@ def create_board():
             start_color = "white"
 
 
+is_figure_selected = False
+figure_to_move = ""
+
+
 def l_mouse_button_click(event):
-    print("Clicked")
+    global figure_to_move
+    global is_figure_selected
+    if is_figure_selected:
+        # Here add call to your func
+        is_figure_selected = False
+    else:
+        # Next row should be in any 'if' condition after setting rectangle which will be used for move
+        is_figure_selected = True
 
 
 canvas = Canvas(window, width=600, height=600)
