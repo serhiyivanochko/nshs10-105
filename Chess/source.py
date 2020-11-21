@@ -1,6 +1,7 @@
 from tkinter import *
 
 window = Tk()
+delta = 25
 
 
 def create_board():
@@ -26,24 +27,71 @@ def create_board():
 
 is_figure_selected = False
 figure_to_move = ""
+list_possible_steps = []
+
+
+def show_steps(figure, name):
+    if name == "king":
+        figures = canvas.coords(figure)
+        number_row = int(figures[1] / 75)
+        number_cell = int(figures[0] / 75)
+        # print("Row: " + str(number_row) + ", Cell: " + str(number_cell))
+        for i in range(8):
+            if i != number_cell:
+                step = canvas.create_oval(i * 75 + delta, (number_row * 75) + delta, ((i + 1) * 75) - delta,
+                                          ((number_row + 1) * 75) - delta, fill="green")
+                list_possible_steps.append(step)
+        for i in range(8):
+            if i != number_row:
+                step = canvas.create_oval((number_cell * 75) + delta, i * 75 + delta, ((number_cell + 1) * 75) - delta,
+                                          ((i + 1) * 75) - delta, fill="green")
+                list_possible_steps.append(step)
+
+
+def move(figure, name, new_x, new_y):
+    if name == "king":
+        new_row_number = int(new_y / 75)
+        new_cell_number = int(new_x / 75)
+        print("Row: " + str(new_row_number) + ", Cell: " + str(new_cell_number))
+        canvas.coords(figure, new_cell_number * 75 + delta, new_row_number * 75 + delta,
+                      (new_cell_number + 1) * 75 - delta, (new_row_number + 1) * 75 - delta)
+
+
+def clean_steps():
+    global list_possible_steps
+    iterator = len(list_possible_steps) - 1
+    while len(list_possible_steps) > 0:
+        canvas.delete(list_possible_steps[iterator])
+        list_possible_steps.remove(list_possible_steps[iterator])
+        iterator = iterator - 1
 
 
 def l_mouse_button_click(event):
     global figure_to_move
     global is_figure_selected
     if is_figure_selected:
-        # Here add call to your func
+        move(figure_to_move, "king", event.x, event.y)
+        clean_steps()
         is_figure_selected = False
     else:
-        # Next row should be in any 'if' condition after setting rectangle which will be used for move
-        is_figure_selected = True
+        figures =[]
+        figures.append(king1)
+        figures.append(king2)
+
+        for i in range(len(figures)):
+            figure_coords = canvas.coords(figures[i])
+            if event.x > figure_coords[0] and event.x < figure_coords[2] and event.y > figure_coords[1] and event.y < figure_coords[3]:
+                figure_to_move = figures[i]
+                show_steps(figure_to_move, "king")
+            is_figure_selected = True
 
 
 canvas = Canvas(window, width=600, height=600)
 canvas.pack()
-
 create_board()
 
-window.bind("<Button-1>", l_mouse_button_click)
+king1 = canvas.create_rectangle(300 + delta, 0 + delta, 375 - delta, 75 - delta, tag="kingBL", fill="red")
+king2 = canvas.create_rectangle(300 + delta, 525 + delta, 375 - delta, 600 - delta, tag="kingBL", fill="red")
 
+window.bind("<Button-1>", l_mouse_button_click)
 window.mainloop()
