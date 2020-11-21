@@ -2,6 +2,7 @@ from tkinter import *
 
 window = Tk()
 
+
 def show_possible_step(rect, figure_type):
     global rect_x
     global rect_y
@@ -137,9 +138,6 @@ def show_possible_step(rect, figure_type):
         canvas.create_oval(rect_x + 450, rect_y + 450, rect_x + 450, rect_y + 450, fill="green")
 
 
-
-
-
 def create_board():
     start_x = 0
     start_y = 0
@@ -163,8 +161,6 @@ def create_board():
 
 is_figure_selected = False
 figure_to_move = ""
-
-
 
 
 def l_mouse_button_click(event):
