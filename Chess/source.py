@@ -29,24 +29,28 @@ figure_to_move = ""
 list_possible_steps = []
 
 delta=25
+
 def show_steps(pawn, name):
     if name == "pawn":
         figures = canvas.coords(pawn)
         number_row = int(figures[1] / 75)
         number_cell = int(figures[0] / 75)
-        #print("Row: " + str(number_row) + ", Cell: " + str(number_cell))
 
-        for i in range(2):
-            if i != number_row:
+        if number_row == 1:
+            max_step = 3
+        else:
+            max_step = 2
+
+        for i in range(number_row - 1, number_row + max_step):
                 step = canvas.create_oval((number_cell * 75) + delta, i * 75 + delta, ((number_cell + 1) * 75) - delta,
                                           ((i + 1) * 75) - delta, fill="green")
                 list_possible_steps.append(step)
-            for i in range(0):
-                if i != number_cell:
-                    step = canvas.create_oval(i * 525 + delta, (number_row * 525) + delta, ((i + 1) * 525) - delta,
-                                              ((number_row + 1) * 525) - delta, fill="green")
-                    list_possible_steps.append(step)
 
+        # show pawn hits: pawn can hit 1 cell long
+        for i in (number_cell +1, number_cell -1):
+            step = canvas.create_oval((i * 75) + delta, (number_row +1) * 75 + delta, ((i +1) * 75) - delta,
+                                      ((number_row + 2) * 75) - delta, fill="blue")
+            list_possible_steps.append(step)
 
 def move(pawn, name, new_x, new_y):
     if name == "pawn":
