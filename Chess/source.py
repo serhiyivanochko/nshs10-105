@@ -29,9 +29,9 @@ figure_to_move = ""
 list_possible_steps = []
 
 delta=25
-def show_steps(figure, name):
+def show_steps(pawn, name):
     if name == "pawn":
-        figures = canvas.coords(figure)
+        figures = canvas.coords(pawn)
         number_row = int(figures[1] / 75)
         number_cell = int(figures[0] / 75)
         #print("Row: " + str(number_row) + ", Cell: " + str(number_cell))
@@ -48,12 +48,12 @@ def show_steps(figure, name):
                     list_possible_steps.append(step)
 
 
-def move(figure, name, new_x, new_y):
+def move(pawn, name, new_x, new_y):
     if name == "pawn":
         new_row_number = int(new_y / 75)
         new_cell_number = int(new_x / 75)
         print("Row: " + str(new_row_number) + ", Cell: " + str(new_cell_number))
-        canvas.coords(figure, new_cell_number * 75 + delta, new_row_number * 75 + delta,
+        canvas.coords(pawn, new_cell_number * 75 + delta, new_row_number * 75 + delta,
                       (new_cell_number + 1) * 75 - delta, (new_row_number + 1) * 75 - delta)
 
 
@@ -125,16 +125,6 @@ def l_mouse_button_click(event):
         if event.x > 525 and event.x < 600 and event.y > 75 and event.y < 150:
             print("Пішка 7H ")
 
-
-'''def l_mouse_button_click(event):
-    global figure_to_move
-    global is_figure_selected
-    if is_figure_selected:
-        # Here add call to your func
-        is_figure_selected = False
-    else:
-        # Next row should be in any 'if' condition after setting rectangle which will be used for move
-        is_figure_selected = True'''
 
 canvas = Canvas(window, width=600, height=600)
 canvas.pack()
