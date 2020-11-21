@@ -136,10 +136,6 @@ def show_possible_step(rect, figure_type):
         canvas.create_oval(rect_x + 375, rect_y + 375, rect_x + 375, rect_y + 375, fill="green")
         canvas.create_oval(rect_x + 450, rect_y + 450, rect_x + 450, rect_y + 450, fill="green")
 
-
-
-
-
 def create_board():
     start_x = 0
     start_y = 0

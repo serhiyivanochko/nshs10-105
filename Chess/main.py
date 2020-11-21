@@ -1,141 +1,7 @@
 from tkinter import *
 
 window = Tk()
-
-
-def show_possible_step(rect, figure_type):
-    global rect_x
-    global rect_y
-    rect["tag"]
-
-    if figure_type == "rook":
-        canvas.coords(rect)
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x, rect_y - 75, rect_x + 75, rect_y - 150, fill="green")
-        canvas.create_oval(rect_x, rect_y - 150, rect_x + 75, rect_y - 225, fill="green")
-        canvas.create_oval(rect_x, rect_y - 225, rect_x + 75, rect_y - 300, fill="green")
-        canvas.create_oval(rect_x, rect_y - 300, rect_x + 75, rect_y - 375, fill="green")
-        canvas.create_oval(rect_x, rect_y - 375, rect_x + 75, rect_y - 450, fill="green")
-        canvas.create_oval(rect_x, rect_y - 450, rect_x + 75, rect_y - 525, fill="green")
-        canvas.create_oval(rect_x, rect_y - 525, rect_x + 75, rect_y - 150, fill="green")
-
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y, rect_x + 150, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 150, rect_y, rect_x + 225, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 225, rect_y, rect_x + 300, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 300, rect_y, rect_x + 375, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 375, rect_y, rect_x + 450, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 450, rect_y, rect_x + 525, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 525, rect_y, rect_x + 600, rect_y - 75, fill="green")
-
-    if figure_type == "khight":
-        canvas.coords(rect)
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x - 75, rect_y - 150, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y - 150, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y + 150, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x - 75, rect_y + 150, rect_x + 75, rect_y - 75, fill="green")
-
-
-    if figure_type == "bishop":
-        canvas.coords(rect)
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y - 75, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 150, rect_y - 150, rect_x + 150, rect_y - 150, fill="green")
-        canvas.create_oval(rect_x + 225, rect_y - 225, rect_x + 225, rect_y - 225, fill="green")
-        canvas.create_oval(rect_x + 300, rect_y - 300, rect_x + 300, rect_y - 300, fill="green")
-        canvas.create_oval(rect_x + 375, rect_y - 375, rect_x + 375, rect_y - 375, fill="green")
-        canvas.create_oval(rect_x + 450, rect_y - 450, rect_x + 450, rect_y - 450, fill="green")
-
-        canvas.create_oval(rect_x - 75, rect_y - 75, rect_x - 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x - 150, rect_y - 150, rect_x - 150, rect_y - 150, fill="green")
-        canvas.create_oval(rect_x - 225, rect_y - 225, rect_x - 225, rect_y - 225, fill="green")
-        canvas.create_oval(rect_x - 300, rect_y - 300, rect_x - 300, rect_y - 300, fill="green")
-        canvas.create_oval(rect_x - 375, rect_y - 375, rect_x - 375, rect_y - 375, fill="green")
-        canvas.create_oval(rect_x - 450, rect_y - 450, rect_x - 450, rect_y - 450, fill="green")
-
-        canvas.create_oval(rect_x - 75, rect_y + 75, rect_x - 75, rect_y + 75, fill="green")
-        canvas.create_oval(rect_x - 150, rect_y + 150, rect_x - 150, rect_y + 150, fill="green")
-        canvas.create_oval(rect_x - 225, rect_y + 225, rect_x - 225, rect_y + 225, fill="green")
-        canvas.create_oval(rect_x - 300, rect_y + 300, rect_x - 300, rect_y + 300, fill="green")
-        canvas.create_oval(rect_x - 375, rect_y + 375, rect_x - 375, rect_y + 375, fill="green")
-        canvas.create_oval(rect_x - 450, rect_y + 450, rect_x - 450, rect_y + 450, fill="green")
-
-        canvas.create_oval(rect_x + 75, rect_y + 75, rect_x + 75, rect_y + 75, fill="green")
-        canvas.create_oval(rect_x + 150, rect_y + 150, rect_x + 150, rect_y + 150, fill="green")
-        canvas.create_oval(rect_x + 225, rect_y + 225, rect_x + 225, rect_y + 225, fill="green")
-        canvas.create_oval(rect_x + 300, rect_y + 300, rect_x + 300, rect_y + 300, fill="green")
-        canvas.create_oval(rect_x + 375, rect_y + 375, rect_x + 375, rect_y + 375, fill="green")
-        canvas.create_oval(rect_x + 450, rect_y + 450, rect_x + 450, rect_y + 450, fill="green")
-
-
-    if figure_type == "pawns":
-        canvas.coords(rect)
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x, rect_y - 75, rect_x, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x, rect_y - 150, rect_x, rect_y - 75, fill="green")
-
-
-    if figure_type == "king":
-        canvas.coords(rect)
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x - 75, rect_y - 75, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y + 75, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y + 75, rect_x + 75, rect_y + 75, fill="green")
-        canvas.create_oval(rect_x - 75, rect_y - 75, rect_x - 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y - 75, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x - 75, rect_y - 75, rect_x - 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x - 75, rect_y + 75, rect_x - 75, rect_y + 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y + 75, rect_x + 75, rect_y + 75, fill="green")
-
-
-    if figure_type == "gueen":
-        canvas.coords(rect)
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x, rect_y - 75, rect_x + 75, rect_y - 150, fill="green")
-        canvas.create_oval(rect_x, rect_y - 150, rect_x + 75, rect_y - 225, fill="green")
-        canvas.create_oval(rect_x, rect_y - 225, rect_x + 75, rect_y - 300, fill="green")
-        canvas.create_oval(rect_x, rect_y - 300, rect_x + 75, rect_y - 375, fill="green")
-        canvas.create_oval(rect_x, rect_y - 375, rect_x + 75, rect_y - 450, fill="green")
-        canvas.create_oval(rect_x, rect_y - 450, rect_x + 75, rect_y - 525, fill="green")
-        canvas.create_oval(rect_x, rect_y - 525, rect_x + 75, rect_y - 150, fill="green")
-
-        canvas.create_oval(rect_x, rect_y, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 75, rect_y, rect_x + 150, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 150, rect_y, rect_x + 225, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 225, rect_y, rect_x + 300, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 300, rect_y, rect_x + 375, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 375, rect_y, rect_x + 450, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 450, rect_y, rect_x + 525, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 525, rect_y, rect_x + 600, rect_y - 75, fill="green")
-
-        canvas.create_oval(rect_x + 75, rect_y - 75, rect_x + 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x + 150, rect_y - 150, rect_x + 150, rect_y - 150, fill="green")
-        canvas.create_oval(rect_x + 225, rect_y - 225, rect_x + 225, rect_y - 225, fill="green")
-        canvas.create_oval(rect_x + 300, rect_y - 300, rect_x + 300, rect_y - 300, fill="green")
-        canvas.create_oval(rect_x + 375, rect_y - 375, rect_x + 375, rect_y - 375, fill="green")
-        canvas.create_oval(rect_x + 450, rect_y - 450, rect_x + 450, rect_y - 450, fill="green")
-
-        canvas.create_oval(rect_x - 75, rect_y - 75, rect_x - 75, rect_y - 75, fill="green")
-        canvas.create_oval(rect_x - 150, rect_y - 150, rect_x - 150, rect_y - 150, fill="green")
-        canvas.create_oval(rect_x - 225, rect_y - 225, rect_x - 225, rect_y - 225, fill="green")
-        canvas.create_oval(rect_x - 300, rect_y - 300, rect_x - 300, rect_y - 300, fill="green")
-        canvas.create_oval(rect_x - 375, rect_y - 375, rect_x - 375, rect_y - 375, fill="green")
-        canvas.create_oval(rect_x - 450, rect_y - 450, rect_x - 450, rect_y - 450, fill="green")
-
-        canvas.create_oval(rect_x - 75, rect_y + 75, rect_x - 75, rect_y + 75, fill="green")
-        canvas.create_oval(rect_x - 150, rect_y + 150, rect_x - 150, rect_y + 150, fill="green")
-        canvas.create_oval(rect_x - 225, rect_y + 225, rect_x - 225, rect_y + 225, fill="green")
-        canvas.create_oval(rect_x - 300, rect_y + 300, rect_x - 300, rect_y + 300, fill="green")
-        canvas.create_oval(rect_x - 375, rect_y + 375, rect_x - 375, rect_y + 375, fill="green")
-        canvas.create_oval(rect_x - 450, rect_y + 450, rect_x - 450, rect_y + 450, fill="green")
-
-        canvas.create_oval(rect_x + 75, rect_y + 75, rect_x + 75, rect_y + 75, fill="green")
-        canvas.create_oval(rect_x + 150, rect_y + 150, rect_x + 150, rect_y + 150, fill="green")
-        canvas.create_oval(rect_x + 225, rect_y + 225, rect_x + 225, rect_y + 225, fill="green")
-        canvas.create_oval(rect_x + 300, rect_y + 300, rect_x + 300, rect_y + 300, fill="green")
-        canvas.create_oval(rect_x + 375, rect_y + 375, rect_x + 375, rect_y + 375, fill="green")
-        canvas.create_oval(rect_x + 450, rect_y + 450, rect_x + 450, rect_y + 450, fill="green")
+delta = 25
 
 
 def create_board():
@@ -161,24 +27,128 @@ def create_board():
 
 is_figure_selected = False
 figure_to_move = ""
+list_possible_steps = []
+
+
+def show_steps(figure, name):
+    if name == "pawl":
+        global pawl
+        figures = canvas.coords(figure)
+        number_row = int(figures[1] / 75)
+        number_cell = int(figures[0] / 75)
+        # print("Row: " + str(number_row) + ", Cell: " + str(number_cell))
+
+
+        if pawl != number_row:
+
+            step = canvas.create_oval((number_cell * 75) + delta, pawl * 75 + delta, ((number_cell + 1) * 75) - delta,
+                                          ((pawl + 1) * 75) - delta, fill="green")
+            list_possible_steps.append(step)
+
+    if name == "rook":
+        figures = canvas.coords(figure)
+        number_row = int(figures[1] / 75)
+        number_cell = int(figures[0] / 75)
+        # print("Row: " + str(number_row) + ", Cell: " + str(number_cell))
+        for i in range(8):
+            if i != number_cell:
+                step = canvas.create_oval(i * 75 + delta, (number_row * 75) + delta, (i * 75) - delta,
+                                          (number_row * 75) - delta, fill="green")
+                list_possible_steps.append(step)
+        for i in range(8):
+            if i != number_row:
+                step = canvas.create_oval((number_cell * 75) + delta, i * 75 + delta, ((number_cell + 1) * 75) - delta,
+                                          ((i + 1) * 75) - delta, fill="green")
+                list_possible_steps.append(step)
+
+
+    if name == "king":
+        global king
+        figures = canvas.coords(figure)
+        number_row = int(figures[1] / 75)
+        number_cell = int(figures[0] / 75)
+        # print("Row: " + str(number_row) + ", Cell: " + str(number_cell))
+
+        if king != number_cell:
+            step = canvas.create_oval(king * 75 + delta, (number_row * 75) + delta, ((king + 1) * 75) - delta,
+                                          ((number_row + 1) * 75) - delta, fill="green")
+            list_possible_steps.append(step)
+
+        if king != number_row:
+            step = canvas.create_oval((number_cell * 75) + delta, king * 75 + delta, ((number_cell + 1) * 75) - delta,
+                                          ((king + 1) * 75) - delta, fill="green")
+            list_possible_steps.append(step)
+
+
+    if name == "knight":
+        global knight
+        figures = canvas.coords(figure)
+        number_row = int(figures[1] / 75)
+        number_cell = int(figures[0] / 75)
+        # print("Row: " + str(number_row) + ", Cell: " + str(number_cell))
+
+        if knight != number_cell:
+            step = canvas.create_oval(knight * 225 + delta, (number_row / 75) + delta, ((knight + 1) * 225) - delta,
+                                          ((number_row + 1) / 75) - delta, fill="green")
+            step = canvas.create_oval(knight * 225 + delta, (number_row * 75) + delta, ((knight + 1) * 225) - delta,
+                                      ((number_row + 1) * 75) - delta, fill="green")
+            list_possible_steps.append(step)
+
+        if knight != number_row:
+            step = canvas.create_oval((number_cell / 75) + delta, knight * 225 + delta, ((number_cell + 1) / 75) - delta,
+                                          ((knight + 1) * 225) - delta, fill="green")
+            step = canvas.create_oval((number_cell * 75) + delta, knight * 225 + delta,
+                                      ((number_cell + 1) * 75) - delta,
+                                      ((knight + 1) * 225) - delta, fill="green")
+            list_possible_steps.append(step)
+
+def move(figure, name, new_x, new_y):
+    if name == "rook":
+        new_row_number = int(new_y / 75)
+        new_cell_number = int(new_x / 75)
+        print("Row: " + str(new_row_number) + ", Cell: " + str(new_cell_number))
+        canvas.coords(figure, new_cell_number * 75 + delta, new_row_number * 75 + delta,
+                      (new_cell_number + 1) * 75 - delta, (new_row_number + 1) * 75 - delta)
+
+
+def clean_steps():
+    global list_possible_steps
+    iterator = len(list_possible_steps) - 1
+    while len(list_possible_steps) > 0:
+        canvas.delete(list_possible_steps[iterator])
+        list_possible_steps.remove(list_possible_steps[iterator])
+        iterator = iterator - 1
 
 
 def l_mouse_button_click(event):
     global figure_to_move
     global is_figure_selected
     if is_figure_selected:
-        # Here add call to your func
+        move(figure_to_move, "rook", event.x, event.y)
+        clean_steps()
         is_figure_selected = False
     else:
-        # Next row should be in any 'if' condition after setting rectangle which will be used for move
-        is_figure_selected = True
+        figures = []
+        figures.append(rook1)
+        figures.append(rook2)
+        figures.append(rook3)
+        figures.append(rook4)
+
+        for i in range(len(figures)):
+            figure_coords = canvas.coords(figures[i])
+            if event.x > figure_coords[0] and event.x < figure_coords[2] and event.y > figure_coords[1] and event.y < \
+                    figure_coords[3]:
+                figure_to_move = figures[i]
+                show_steps(figure_to_move, "rook")
+            is_figure_selected = True
 
 
 canvas = Canvas(window, width=600, height=600)
 canvas.pack()
-
 create_board()
-
+rook1 = canvas.create_rectangle(0 + delta, 525 + delta, 75 - delta, 600 - delta, tag="rookBL", fill="red")
+rook2 = canvas.create_rectangle(525 + delta, 525 + delta, 600 - delta, 600 - delta, tag="rookBL", fill="red")
+rook3 = canvas.create_rectangle(0 + delta, 0 + delta, 75 - delta, 75 - delta, tag="rookBL", fill="red")
+rook4 = canvas.create_rectangle(525 + delta, 0 + delta, 600 - delta, 75 - delta, tag="rookBL", fill="red")
 window.bind("<Button-1>", l_mouse_button_click)
-
 window.mainloop()
