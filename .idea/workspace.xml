@@ -20,7 +20,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/README.md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Chess" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ivan\Documents\nshs10-105\Chess" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="source" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -70,22 +75,22 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1605956342524" />
-    <state width="1259" height="263" key="GridCell.Tab.0.bottom" timestamp="1605969694119">
+    <state width="1259" height="263" key="GridCell.Tab.0.bottom" timestamp="1605974520193">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1605969694119" />
-    <state width="1259" height="263" key="GridCell.Tab.0.center" timestamp="1605969694119">
+    <state width="1259" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1605974520193" />
+    <state width="1259" height="263" key="GridCell.Tab.0.center" timestamp="1605974520193">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1605969694119" />
-    <state width="1259" height="263" key="GridCell.Tab.0.left" timestamp="1605969694119">
+    <state width="1259" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1605974520193" />
+    <state width="1259" height="263" key="GridCell.Tab.0.left" timestamp="1605974520192">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1605969694119" />
-    <state width="1259" height="263" key="GridCell.Tab.0.right" timestamp="1605969694119">
+    <state width="1259" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1605974520192" />
+    <state width="1259" height="263" key="GridCell.Tab.0.right" timestamp="1605974520193">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1259" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1605969694119" />
+    <state width="1259" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1605974520193" />
     <state x="457" y="406" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605955834333">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
